@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color:red; font-size:x-large; text-align:center"><u>CLOUSERS</u></h1>
+    <pre style="color: blue;font-size: large;">Q.1-"function counter(){
+        var counter = 0;
+    
+        function IncreaseCounter() {
+            return counter += 1;
+        };
+    
+        return IncreaseCounter;
+    }
+    
+    var counter = counter();
+    alert(counter());
+    alert(counter());
+    alert(counter());
+    alert(counter());"</pre>
+     
+   <pre style="color: darkmagenta; font-size: x-large;">Ans-
+    var counter = 0;
+    
+    function IncreaseCounter() {
+        return counter += 1;
+    };
+
+    return IncreaseCounter;
+   }
+
+   var counter = counter();
+   alert(counter());
+   alert(counter());
+   alert(counter());
+   alert(counter());"
+   Ans=1
+       2
+       3
+       4
+
+    
+    <pre style="color: blue; font-size: large;">Q2.let count = 0;
+        (function () {
+          if (count === 0) {
+            let count = 1;
+            console.log(count); // What is logged?
+          }
+          console.log(count); // What is logged?
+        })();</pre>
+
+    <pre style="color: darkmagenta; font-size: x-large;">Ans-2
+        let count = 0;
+        (function () {
+          if (count === 0) {
+            let count = 1;
+            console.log(count); // What is logged?
+          }
+          console.log(count); // What is logged?
+        })();
+
+        Ans=1,0
+    </pre>
+    <pre style="color: blue; font-size: large;">
+     Q3= 
+    for (var i = 0; i <lt><</lt> 3; i++) {
+         setTimeout(function log() {
+          console.log(i); // What is logged?
+         }, 1000);
+     }"</pre>
+
+    <pre style="color: darkmagenta; font-size: x-large;">Ans-3
+        
+        for (var i = 0; i <lt><</lt> 3; i++) {
+            setTimeout(function log() {
+              console.log(i); // What is logged?
+            }, 1000);
+         
+        }
+        Ans=3
+            3
+            3</pre>
+    </pre>
+    <p style="color: blue; font-size: large;">Q4=Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.
+    </p>
+    <pre style="color: darkmagenta; font-size: x-large;">
+    Ans=function lenFun(width) {
+        function brFun(length) {
+          return width * length;
+        }
+        return brFun(20);
+      }
+      console.log(lenFun(10))
+      //300
+</pre>
+<pre style="color: blue; font-size: large;">Q5=
+    var a = 12;
+(function () {
+  alert(a);
+})();
+
+</pre>
+<pre style="color: darkmagenta;font-size: x-large;">
+ANS= var a = 12;
+(function () {
+  alert(a);
+})();
+Ans=12
+</pre>
+<pre style="color:blue;font-size: large;">Q6="var a = 10;
+    var x = (function () {
+      var a = 12;
+      return function () {
+        alert(a);
+      };
+    })();
+    x();"</pre>
+    <pre style="color: darkmagenta; font-size: x-large;">Ans=var a = 10;
+        var x = (function () {
+          var a = 12;
+          return function () {
+            alert(a);
+          };
+        })();
+        x();
+    Ans=12
+   </pre>
+   <pre style="color: blue;font-size: large;">Q7="var globalVar = ""xyz"";
+
+    (function outerFunc(outerArg) {
+        var outerVar = 'a';
+        
+        (function innerFunc(innerArg) {
+        var innerVar = 'b';
+        
+        console.log(
+            ""outerArg = "" + outerArg + ""\n"" +
+            ""innerArg = "" + innerArg + ""\n"" +
+            ""outerVar = "" + outerVar + ""\n"" +
+            ""innerVar = "" + innerVar + ""\n"" +
+            ""globalVar = "" + globalVar);
+        
+        })(456);
+    })(123);"
+   </pre>
+   Ans-<pre style="color: darkmagenta; font-size: x-large;">
+    var globalVar = "xyz";
+    (function outerFunc(outerArg) {
+        var outerVar = 'a';
+        (function innerFunc(innerArg) {
+        var innerVar = 'b';
+        console.log("------------ Q8 --------------")
+        console.log(
+            "outerArg = " + outerArg + "\n" + //123
+            "innerArg = " + innerArg + "\n" + //456
+            "outerVar = " + outerVar + "\n" + //a
+            "innerVar = " + innerVar + "\n" + //b
+            "globalVar = " + globalVar); // xyz
+        })(456);
+    })(123);
+    Ans-
+    outerArg = 123
+    innerArg = 456
+    outerVar = a
+    innerVar = b
+   globalVar = xyz
+   </pre>
+    
+   </pre> 
+</body>
+</html>
